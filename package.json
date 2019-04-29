@@ -1,0 +1,27 @@
+{
+  "name": "bamazon",
+  "version": "1.0.0",
+  "description": "CLI storefront with MySQL backend",
+  "main": "bamazonCustomer.js",
+  "scripts": {
+    "test": "inventory"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gkoppisetty96/bamazon.git"
+  },
+  "keywords": [
+    "storefront",
+    "CLI-storefront"
+  ],
+  "author": "Geethika Koppisetty",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gkoppisetty96/bamazon/issues"
+  },
+  "homepage": "https://github.com/Gkoppisetty96/bamazon#readme",
+  "dependencies": {
+    "inquirer": "^6.3.1",
+    "mysql": "^2.17.1"
+  }
+}
