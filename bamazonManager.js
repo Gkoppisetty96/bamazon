@@ -32,12 +32,16 @@ function start() {
 
             filter: function (val) {
                 if (val === 'View Products for Sale') {
+                    console.log("stock")
                     return 'currentStock';
                 } else if (val === 'View Low Inventory') {
+                    console.log("low");
                     return 'lowInventory';
                 } else if (val === 'Add to Inventory') {
+                    console.log("add");
                     return 'addInventory';
                 } else if (val === 'Add New Product') {
+                    console.log("new");
                     return 'newProduct';
                 } else {
                     console.log('ERROR: Unsupported operation!');
@@ -46,8 +50,9 @@ function start() {
             }
         }
     ]).then(function (input) {
-        // console.log ("manager selected" + JSON.stringify(input));
-        var action = JSON.stringify(input);
+        var action = input.option;
+        
+        console.log ("manager selected " + action);
         // trigger appropriate action
         switch (action) {
             case "currentStock":
@@ -64,6 +69,8 @@ function start() {
                 break;
             default:
                 console.log("This doesn't look right. Can you try again?");
+                start();
+                break;
         }
     })
 }
@@ -80,9 +87,9 @@ function currentStock() {
         var stock = "";
         for (var i = 0; i < data.length; i++) {
             stock = "";
-            stock += "Item ID: " + data[i].item_id + "|";
-            stock += "Product Name: " + data[i].product_name + "|";
-            stock += "Department: " + data[i].department_name + "|";
+            stock += "Item ID: " + data[i].item_id + " | ";
+            stock += "Product Name: " + data[i].product_name + " | ";
+            stock += "Department: " + data[i].department_name + " | ";
             stock += "Price: $" + data[i].price + '\n';
 
             console.log(stock);
@@ -104,9 +111,9 @@ function lowStock() {
         var stock = "";
         for (var i = 0; i < data.length; i++) {
             stock = "";
-            stock += "Item ID: " + data[i].item_id + "|";
-            stock += "Product Name: " + data[i].product_name + "|";
-            stock += "Department: " + data[i].department_name + "|";
+            stock += "Item ID: " + data[i].item_id + " | ";
+            stock += "Product Name: " + data[i].product_name + " | ";
+            stock += "Department: " + data[i].department_name + " | ";
             stock += "Price: $" + data[i].price + '\n';
 
             console.log(stock);

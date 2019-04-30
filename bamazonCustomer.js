@@ -29,9 +29,9 @@ function start() {
         var stock = "";
         for (var i = 0; i < data.length; i++) {
             stock = "";
-            stock += "Item ID: " + data[i].item_id + "|";
-            stock += "Product Name: " + data[i].product_name + "|";
-            stock += "Department: " + data[i].department_name + "|";
+            stock += "Item ID: " + data[i].item_id + " | ";
+            stock += "Product Name: " + data[i].product_name + " | ";
+            stock += "Department: " + data[i].department_name + " | ";
             stock += "Price: $" + data[i].price + '\n';
 
             console.log(stock);
