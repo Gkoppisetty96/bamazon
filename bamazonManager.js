@@ -52,7 +52,7 @@ function start() {
     ]).then(function (input) {
         var action = input.option;
         
-        console.log ("manager selected " + action);
+        // console.log ("manager selected " + action);
         // trigger appropriate action
         switch (action) {
             case "currentStock":
@@ -90,7 +90,8 @@ function currentStock() {
             stock += "Item ID: " + data[i].item_id + " | ";
             stock += "Product Name: " + data[i].product_name + " | ";
             stock += "Department: " + data[i].department_name + " | ";
-            stock += "Price: $" + data[i].price + '\n';
+            stock += "Price: $" + data[i].price + " | ";
+            stock += "Quantity: " + data[i].stock_quantity + "\n";
 
             console.log(stock);
         }
@@ -114,7 +115,8 @@ function lowStock() {
             stock += "Item ID: " + data[i].item_id + " | ";
             stock += "Product Name: " + data[i].product_name + " | ";
             stock += "Department: " + data[i].department_name + " | ";
-            stock += "Price: $" + data[i].price + '\n';
+            stock += "Price: $" + data[i].price + " | ";
+            stock += "Quantity: " + data[i].stock_quantity + "\n";
 
             console.log(stock);
         }

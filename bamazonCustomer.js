@@ -113,6 +113,7 @@ function purchasePrompt() {
                     })
                 } else {
                     console.log("Sorry, we don't currently have enough product in stock. \n Please modify your order.");
+                    console.log ("---\n");
                     start();
                 }
             }
