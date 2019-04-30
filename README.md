@@ -2,9 +2,9 @@
 
 This application uses a command-line based storefront and a MySQL databse backend. This application presents two interfaces: customer and manager. 
 
-![alt-text](/assets/thisimage)
 
-##Customer
+
+## Customer
 
 This allows the user to view the current store inventory: item IDs, descriptions, department, and price. 
 
@@ -22,7 +22,7 @@ If the store is out of stock, the user must modify their order.
 
 ![Out of Stock](/assets/customer_4.PNG)
 
-##Manager
+## Manager
 
 This allows the user to choose between 4 options:
 
